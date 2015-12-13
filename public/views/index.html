@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Routing app!</title>
+    
+    <!--Sets the base path for angular routing-->
+    <base href="/">
+    
+    <!-- CSS -->
+    <!-- load bootstrap and our stylesheet -->
+   
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+    <style>
+        body { padding-top:50px; }
+    </style>
+
+     <!-- JS -->
+     <!-- load angular and our custom application -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-animate.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/app.routes.js"></script>
+</head>
+    <!-- Declare our angular app and anfular controller -->
+<body class="container" ng-app="routerApp" ng-controller="mainController as main">
+     <!-- HEADER AND NAVBAR -->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Angular Routing Example</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="/about"><i class="fa fa-shield"></i> About</a></li>
+                <li><a href="/contact"><i class="fa fa-comment"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!--    Main content and injected views-->
+    <main>
+        
+    <!-- Angular templating will go here -->
+    <!-- This is where content will be injected-->
+    <div id="content-views">
+        <div ng-view></div>
+    </div>
+    </main>
+</body>
+</html>
